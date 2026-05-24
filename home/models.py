@@ -16,3 +16,15 @@ class HomePage(Page):
     api_fields = [
         APIField("intro"),
     ]
+
+
+class AboutPage(Page):
+    body = RichTextField(blank=True, default="")
+
+    content_panels = Page.content_panels + [
+        FieldPanel("body"),
+    ]
+
+    api_fields = [
+        APIField("body"),
+    ]
